@@ -16,7 +16,7 @@
 }
 /* .dark-mode {
     --base-color: #393636;
-    --accent-color: #1f1f1f;
+    --accent-color: #755ed0;
     --text-color: #ffffff;
     --secondary-text-color: #8171e7;
     --primary-bg-color: #91c6ee;
@@ -222,8 +222,8 @@ section h1 {
     margin-top: 70px;
 }
 .aboutphoto img {
-    width: 400px;
-    height: 440px;
+    width: 380px;
+    height: 450px;
     border-radius: 55% 45% 55% 45%;
     box-shadow: 0 0 50px var(--primary-bg-color);
     transition: transform 0.3s;
@@ -299,5 +299,59 @@ section h1 {
 }
 footer {
     text-align: center;
+    color: var(--text-color);
+}
+
+/* Contact Section Styles */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.contact-item i {
+    color: var(--accent-color);
+    font-size: 1.2em;
+    width: 20px;
+}
+
+.contact-item a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
     color: var(--text-color);
 }

@@ -52,11 +52,14 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Change image on hover
 const photoImg = document.querySelector('.my-photo img');
-photoImg.addEventListener('mouseover', () => {
-    photoImg.src = 'assets/halfpiece.png'; // Replace 'hoverphoto.png' with the path to your hover image
-});
-photoImg.addEventListener('mouseout', () => {
-    photoImg.src = 'assets/formal.png';
-});
+if (photoImg) {
+    photoImg.addEventListener('mouseover', () => {
+        photoImg.src = 'assets/halfpiece.png';
+    });
+
+    photoImg.addEventListener('mouseout', () => {
+        photoImg.src = 'assets/formal.png';
+    });
+}
+

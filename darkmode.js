@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setProfileImage();
     };
 
-    // Toggle theme
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => {
             darkMode === 'active' ? disableDarkMode() : enableDarkMode();

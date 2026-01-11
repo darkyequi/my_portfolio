@@ -18,7 +18,7 @@
     --base-color: #393636;
     --accent-color: #755ed0;
     --text-color: #ffffff;
-    --secondary-text-color: #8171e7;
+    --secondary-text-color: #000000;
     --primary-bg-color: #91c6ee;
     --box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     --bg-gradient: linear-gradient(
@@ -187,7 +187,7 @@ section h1 {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--accent-color);
-    color: var(--base-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -205,11 +205,11 @@ section h1 {
     }
 }
 .btn-cv a{
-    color: var(--base-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 .btn-cv:hover {
-    background-color: var(--text-color);
+    background-color: var(--base-color);
     transform: scale(1.1);
 }
 .socmed a{

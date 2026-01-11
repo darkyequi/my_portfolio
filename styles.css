@@ -71,10 +71,10 @@ body {
 #theme-switch i:last-child {
     display: none;
 }
-.darkmode #theme-switch i:first-child {
+.dark-mode #theme-switch i:first-child {
     display: none;
 }
-.darkmode #theme-switch i:first-child {
+.dark-mode #theme-switch i:last-child {
     display: block;
 }
 .nav-brand h3 {
@@ -95,8 +95,10 @@ body {
 #navbar li {
     margin: 0 20px;
 }
-
-#navbar a {
+#navbar a{
+    text-decoration: none;
+}
+#navbar li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;

@@ -1,24 +1,35 @@
-const themeSwitch = document.getElementById('theme-switch');
-let darkMode = localStorage.getItem('darkMode');
+document.addEventListener('DOMContentLoaded', () => {
+    const themeSwitch = document.getElementById('theme-switch');
+    const profileImg = document.querySelector('.my-photo img');
 
-const enableDarkMode = () => {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'active');
-};
+    let darkMode = localStorage.getItem('darkMode');
 
-const disableDarkMode = () => {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'inactive');
-};
+    const setProfileImage = () => {
+        if (!profileImg) return;
 
-if (darkMode === 'active') {
-    enableDarkMode();
-}
+        profileImg.src = darkMode === 'active'
+            ? 'assets/nightformal.png'
+            : 'assets/formal.png';
+    };
 
+    const enableDarkMode = () => {
+        document.body.classList.add('dark-mode');
+        darkMode = 'active';
+        localStorage.setItem('darkMode', darkMode);
+        setProfileImage();
+    };
 
-if (themeSwitch) {
-    themeSwitch.addEventListener('click', () => {
-        darkMode = localStorage.getItem('darkMode');
-        darkMode === 'active' ? disableDarkMode() : enableDarkMode();
-    });
-}
+    const disableDarkMode = () => {
+        document.body.classList.remove('dark-mode');
+        darkMode = 'inactive';
+        localStorage.setItem('darkMode', darkMode);
+        setProfileImage();
+    };
+
+    // Toggle theme
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', () => {
+            darkMode === 'active' ? disableDarkMode() : enableDarkMode();
+        });
+    }
+});

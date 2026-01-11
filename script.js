@@ -52,14 +52,33 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// const photoImg = document.querySelector('.my-photo img');
+// if (photoImg) {
+//     photoImg.addEventListener('mouseover', () => {
+//         photoImg.src = 'assets/halfpiece.png';
+//     });
+
+//     photoImg.addEventListener('mouseout', () => {
+//         photoImg.src = 'assets/formal.png';
+//     });
+// }
 const photoImg = document.querySelector('.my-photo img');
+
 if (photoImg) {
     photoImg.addEventListener('mouseover', () => {
-        photoImg.src = 'assets/halfpiece.png';
+        const darkMode = localStorage.getItem('darkMode');
+
+        photoImg.src = darkMode === 'active'
+            ? 'assets/piecenight.png'
+            : 'assets/halfpiece.png';
     });
 
     photoImg.addEventListener('mouseout', () => {
-        photoImg.src = 'assets/formal.png';
+        const darkMode = localStorage.getItem('darkMode');
+
+        photoImg.src = darkMode === 'active'
+            ? 'assets/nightformal.png'
+            : 'assets/formal.png';
     });
 }
 

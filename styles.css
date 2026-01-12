@@ -378,3 +378,54 @@ footer {
 .contact-item a:hover {
     color: var(--text-color);
 }
+.contact-form {
+    margin-top: 40px;
+    max-width: 600px;
+    background: var(--primary-bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 130px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    background: var(--base-color);
+}

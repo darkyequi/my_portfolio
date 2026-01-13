@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         setProfileImage();
     };
 
+    if (darkMode === 'active') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+    setProfileImage();
+
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => {
             darkMode === 'active' ? disableDarkMode() : enableDarkMode();

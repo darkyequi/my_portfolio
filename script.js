@@ -80,29 +80,35 @@ if (photoImg) {
     });
 }
 
-// ================= EMAILJS =================
-(function () {
-    emailjs.init("0O0979IJn34bKzx_R"); // ← replace this
-})();
+document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("0O0979IJn34bKzx_R");
 
-const contactForm = document.getElementById("contact-form");
+    const contactForm = document.getElementById("contact-form");
 
-if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+    if (!contactForm) return;
+
+    contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         emailjs.sendForm(
-            "service_0pshl97",   // ← replace this
-            "template_lqcuo7s",  // ← replace this
-            this
-        ).then(() => {
-            alert("Message sent successfully!");
+            "service_0pshl97",
+            "template_lqcuo7s",
+            contactForm,
+            "0O0979IJn34bKzx_R"
+        )
+        emailjs.sendForm(
+            "service_0pshl97",
+            "template_krmxe1h",
+            contactForm,
+            "0O0979IJn34bKzx_R"
+        )
+        .then(() => {
+            alert("✅ Message sent successfully!");
             contactForm.reset();
-        }).catch((error) => {
-            alert("Failed to send message.");
-            console.error(error);
+        })
+        .catch((error) => {
+            alert("❌ Failed to send message. Check console.");
+            console.error("EmailJS Error:", error);
         });
     });
-}
-
-
+});

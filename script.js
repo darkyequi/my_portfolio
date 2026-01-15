@@ -113,3 +113,15 @@ menuToggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
 });
 
+document.getElementById('download-cv').addEventListener('click', function() {
+    // URL of your CV file in the repo
+    const cvUrl = 'assets/CV_MACALALAD.pdf';
+
+    // Create an invisible link element
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'CV_MACALALAD.pdf'; // the file name for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});

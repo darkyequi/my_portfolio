@@ -166,7 +166,7 @@ header {
     position: absolute;
     top: 70px;
     right: 20px;
-    width: 200px;
+    width: 120px;
     background: var(--base-color);
     border-radius: 12px;
     list-style: none;
@@ -185,6 +185,9 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: var(--text-color);
+}
+.nav-sidebar li{
+    text-align: center;
 }
 
 /* =========================

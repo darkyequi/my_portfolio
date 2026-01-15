@@ -9,14 +9,7 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
-document.querySelectorAll('.btn-cv a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-});
+
 
 // Add active class to navbar links on scroll
 window.addEventListener('scroll', function() {

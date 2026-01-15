@@ -1,165 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta settings for character encoding and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Portfolio</title>
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- EmailJS (for contact form functionality) -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
+
 <body class="dark-mode">
-        <nav id="navbar">
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header>
+        <nav id="navbar" class="nav menu">
+
+            <!-- Brand / Logo -->
             <div class="nav-brand">
-                <a href="#home"><h3>Arvin.</h3></a>
+                <a href="#home">
+                    <h3>Arvin.</h3>
+                </a>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <button id="theme-switch">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-regular fa-sun"></i>
-                </button>
-            </ul>
-                
+
+            <!-- Navigation Wrapper -->
+            <div class="navigate">
+
+                <!-- Desktop Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Theme switch & hamburger -->
+                <div class="nav-actions">
+
+                    <!-- Dark/Light mode toggle -->
+                    <button id="theme-switch" aria-label="Toggle theme">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-regular fa-sun"></i>
+                    </button>
+
+                    <!-- Mobile menu toggle -->
+                    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Sidebar Menu -->
+                <ul class="nav-sidebar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
         </nav>
-    <div class="container">
-        <section class="home" id="home">
+    </header>
 
-            <div class="content-home">
-                <h1>Hi, I'm Arvin</h1>
-                <p>I’m an IT-focused developer and designer with experience in web and mobile applications, UI/UX design using Figma, and system testing. I enjoy building functional, user-centered solutions and continuously improving systems through thoughtful design and development.</p>
-                <div class="btn-cv"><a href="assets/aCV_MACALALAD.pdf" download="assets/aCV_MACALALAD.pdf">Download CV</a></div>
-                <div class="socmed">
-                    <a href="https://www.linkedin.com/in/arvin-macalalad-700584291/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/arvin.macalalad.7"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://github.com/darkyequi"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/echingggggg/"><i class="fa-brands fa-square-instagram"></i></a>
-                </div>
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+    <section class="home" id="home">
+
+        <!-- Intro text -->
+        <div class="content-home">
+            <h1>Hi, I'm Arvin</h1>
+
+            <p>
+                I’m an IT-focused developer and designer with experience in web and mobile
+                applications, UI/UX design using Figma, and system testing.
+            </p>
+
+            <!-- Download CV button -->
+            <div class="btn-cv">
+                <a href="./assets/cv-macalalad.pdf" target="_blank" download>
+                    Download CV
+                </a>
             </div>
-            <div class="my-photo"><img src="assets/nightformal.png" alt=""></div>
 
-        </section>  
+            <!-- Social media links -->
+            <div class="socmed">
+                <a href="https://www.linkedin.com/in/arvin-macalalad-700584291/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/arvin.macalalad.7">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://github.com/darkyequi">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/echingggggg/">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+            </div>
+        </div>
 
-        <section class="about" id="about">
-            <h1>About</h1>
-            <div class="container-about">
-                            <div class="aboutphoto"><img src="assets/photo1.jpg" alt=""></div>
+        <!-- Profile image -->
+        <div class="my-photo">
+            <img src="assets/nightformal.png" alt="Arvin portrait">
+        </div>
+    </section>
 
-                <div class="content-about"></div>
-                <div>   
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+    <section class="about" id="about">
+        <h1>About</h1>
+
+        <div class="container-about">
+
+            <!-- About image -->
+            <div class="aboutphoto">
+                <img src="assets/photo1.jpg" alt="About Arvin">
+            </div>
+
+            <!-- About content -->
+            <div class="content-about">
+                <div>
                     <h1>Hi, I'm Arvin</h1>
-                    <p>I have experience collaborating on capstone projects including order management systems, mobile applications, and information systems. My contributions focus on UI/UX flow structuring, system testing, and feature enhancements. I am detail-oriented and passionate about refining systems to enhance usability, performance, and overall user experience.</p>
-                    <div class="btn-cv"><a href="#contact">Contact Me</a></div>
-                </div> 
-                </div>
-            </div>
-        </section>
-
-
-        <section class="pages" id="projects">
-            <h1>Projects</h1>
-                <div class="allproject">
-                    <div class="project">
-                        <h2>TantucoCTC: A Web-Based Order Management and Delivery Tracking System for Tantuco Construction and Trading Corporation</h2>
-                        <p>Author, QA & Developer</p>
-                        <p>Contributed to the development of a web-based order management and delivery
-                            tracking system for Tantuco Construction and Trading Corporation by performing
-                            system and functional testing, fixing identified bugs, preparing documentation for
-                            system revisions.
+                        <p>I have experience collaborating on capstone projects including
+                          order management systems, mobile applications, and information systems. My
+                          contributions focus on UI/UX flow structuring, system testing, and feature
+                          enhancements. I am detail-oriented and passionate about refining systems to enhance
+                          usability, performance, and overall user experience.
                         </p>
-                        <p>Collaborated with a team of developers and designers to ensure the system met
-                            user requirements and functioned smoothly.
-                        </p>
-                    </div>
-                </div>
-        </section>
 
-        <section class="pages" id="skills">
-            <h1>Skills</h1>
-                <div class="allskills">
-                    <div class="skill">
-                        <h2>UI/UX Design (Figma)</h2>
-                        <p>Designing clean, user-centered interfaces and interactive prototypes using Figma.</p>
-                    </div>
-
-                    <div class="skill">
-                        <h2>Programming Languages</h2>
-                        <p>Academic-level experience with Java, C#, C++, and Python.</p>
-                    </div>
-
-                    <div class="skill">
-                        <h2>Web Development</h2>
-                        <p>Basic knowledge of HTML, CSS, JavaScript, PHP, and Laravel for building web applications.</p>
-                    </div>
-
-                    <div class="skill">
-                        <h2>System Analysis & Workflow Design</h2>
-                        <p>Experience in basic system analysis and workflow design for web-based systems.</p>
-                    </div>
-
-                    <div class="skill">
-                        <h2>System & Functional Testing</h2>
-                        <p>Hands-on experience in system and functional testing, including bug identification and fixing.</p>
-                    </div>
-
-                    <div class="skill">
-                        <h2>System Documentation</h2>
-                        <p>Creating clear and structured system documentation for development and maintenance.</p>
-                    </div>
-
-                </div>
-        </section>
-
-        <section class="pages" id="contact">
-            <h1>Contact</h1>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology and design. Feel free to reach out!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fa fa-envelope"></i>
-                            <span>arvinmacalalad807@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-phone"></i>
-                            <span>+63 995 096 8271</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Sariaya, Philippines</span>
-                        </div>
-                        <div class="contact-item">
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="www.linkedin.com/in/macalalad-arvin-3362a03a5">LinkedIn Profile</a>
-                        </div>
-                        <div class="contact-item">
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                            <a href="https://github.com/darkyequi">GitHub Profile</a>
-                        </div>
+                    <br>
+                    <div class="btn-cv">
+                        <a href="#contact">Contact Me</a>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-    <h2>Send Me a Message</h2>
-    <form id="contact-form">
-        <input type="text" name="from_name" placeholder="Your Name" required>
-        <input type="email" name="from_email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</div>
 
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
+    <section class="pages" id="projects">
+        <h1>Projects</h1>
+
+        <div class="allproject">
+            <div class="project">
+                <h2>TantucoCTC: Web-Based Order Management System</h2>
+                <p>Author, QA & Developer</p>
+                <p>
+                Contributed to the development of a web-based order management and delivery
+                tracking system for Tantuco Construction and Trading Corporation by performing
+                system and functional testing, fixing identified bugs, preparing documentation for
+                system revisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+    <section class="pages" id="skills">
+        <h1>Skills</h1>
+
+        <div class="allskills">
+
+            <div class="skill">
+                <h2>UI/UX Design</h2>
+                <p>Designing interfaces and prototypes using Figma.</p>
+            </div>
+
+            <div class="skill">
+                <h2>Programming</h2>
+                <p>Java, C#, C++, and Python.</p>
+            </div>
+
+            <div class="skill">
+                <h2>Web Development</h2>
+                <p>HTML, CSS, JavaScript, PHP, and Laravel.</p>
+            </div>
+
+            <div class="skill">
+                <h2>System Testing</h2>
+                <p>System and functional testing with bug reporting.</p>
+            </div>
+
+            <div class="skill">
+                 <h2>System & Functional Testing</h2>
+                <p>Hands-on experience in system and functional testing, including bug identification and fixing.</p>
+            </div>
+
+            <div class="skill">
+                <h2>System Documentation</h2>
+                <p>Creating clear and structured system documentation for development and maintenance.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+    <section class="pages" id="contact">
+        <h1>Contact</h1>
+
+        <!-- Contact info -->
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Feel free to reach out for opportunities or collaboration.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <span>arvinmacalalad807@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-phone"></i>
+                        <span>+63 995 096 8271</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Sariaya, Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+
+            <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Your Name" required>
+                <input type="email" name="from_email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer>
         <p>&copy; 2026 Arvin. All rights reserved.</p>
     </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="darkmode.js" defer></script>
+
 </body>
 </html>
+
